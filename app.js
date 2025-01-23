@@ -37,10 +37,28 @@ function limpiarCampo(idElemento){
     elementoHTML.setAttribute('placeHolder', 'Escribe un nombre'); //Reestablezco el mensaje original para el ingreso de datos
     return;
 }
-//Limpiar Lista
-//Asignar texto
-//Evento Click - 'Sortear Amigo'
+
 //Elegir un nombre de la lista de ingresados al azar al hacer click en Sortear Amigo
+//Evento Click - 'Sortear Amigo'
+function sortearAmigo(){
+    let nombreGanador;
+    //Verifico que la lista tenga más de dos items para sortear.
+    cantAmigos = miListaDeAmigos.length;
+    if (cantAmigos > 1){
+        nombreGanador = buscarElemento(miListaDeAmigos, generarIndex());
+        console.log(nombreGanador);
+    }
+}
+
 //Generar Index
+function generarIndex(){
+    let indexAzar = Math.floor(Math.random()*cantAmigos);
+    return indexAzar;
+}
 //Buscar
-//SortearAmigo
+function buscarElemento(unaLista, unIndex){
+    return unaLista[unIndex];
+}
+
+//Asignar texto
+//Limpiar Lista
