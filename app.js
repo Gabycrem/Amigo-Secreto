@@ -17,6 +17,7 @@ function agregarAmigo(){
     //Validar que no ingrese un nombre repetido
     if (miListaDeAmigos.includes(nombreAmigo)){
         alert('Nombre repetido, ingrese otro');
+        limpiarCampo('amigo');
         return;
     }
     //Agregar nombre a la lista
@@ -25,6 +26,7 @@ function agregarAmigo(){
     nuevoItemLista(nombreAmigo);
     //Limpiar Campo
     limpiarCampo('amigo');
+    asignarTextoElemento('resultado', '');
     return;
 }
 
@@ -55,6 +57,12 @@ function sortearAmigo(){
         console.log(nombreGanador);
         asignarTextoElemento('resultado',`El amigo secreto sorteado es: ${nombreGanador}`);
         limpiarLista();
+    } else {
+        if (cantAmigos == 1){
+            asignarTextoElemento('resultado', 'No hay suficientes amigos para sortear. Solo ingresaste uno');
+        } else {
+            asignarTextoElemento('resultado', 'No ingresaste ningún amigo');
+        }
     }
     return;
 }
