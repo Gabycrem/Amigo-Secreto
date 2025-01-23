@@ -57,6 +57,8 @@ function sortearAmigo(){
         console.log(nombreGanador);
         asignarTextoElemento('resultado',`El amigo secreto sorteado es: ${nombreGanador}`);
         limpiarLista();
+        document.getElementById('sortear').setAttribute('disabled','true');
+        document.getElementById('reiniciar').removeAttribute('disabled');
     } else {
         if (cantAmigos == 1){
             asignarTextoElemento('resultado', 'No hay suficientes amigos para sortear. Solo ingresaste uno');
@@ -91,4 +93,13 @@ function limpiarLista(){
     }
     miListaDeAmigos = [];
     return;
+}
+
+//           ---- BONUS -------
+// --- Agregando Boton Reiniciar ----- 
+function reiniciarSorteo(){
+    limpiarLista();
+    asignarTextoElemento('resultado', '');
+    document.getElementById('reiniciar').setAttribute('disabled','true');
+    document.getElementById('sortear').removeAttribute('disabled');
 }

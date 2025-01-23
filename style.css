@@ -90,6 +90,7 @@ body {
 .button-container {
     width: 300px;
     justify-content: center;
+    padding: 5px;
 }
 
 /* Estilos de entrada de texto */
@@ -115,6 +116,22 @@ button {
     cursor: pointer;
 }
 
+/* button[disabled = 'true']{
+    background-color: (var(--color-text));
+} */
+
+button:disabled {
+    background-color: var(--color-tertiary); /* Fondo gris */
+    color: var(--color-white); /* Texto blanco */
+    cursor: not-allowed; /* Cursor que indica que no es interactivo */
+    box-shadow: none; /* Quita sombras */
+    border-color: var(--color-tertiary); /* Mantiene el borde uniforme */
+}
+
+button:disabled:hover {
+    background-color: var(--color-tertiary); /* Mantiene el color al pasar el mouse */
+}
+
 .button-add {
     background-color: var(--color-tertiary);
     color: var(--color-text);
@@ -124,6 +141,8 @@ button {
 .button-add:hover {
     background-color: #a1a1a1;
 }
+
+
 
 /* Listas */
 ul {
