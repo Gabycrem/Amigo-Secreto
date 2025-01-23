@@ -47,6 +47,7 @@ function sortearAmigo(){
     if (cantAmigos > 1){
         nombreGanador = buscarElemento(miListaDeAmigos, generarIndex());
         console.log(nombreGanador);
+        asignarTextoElemento('resultado',`El amigo secreto sorteado es: ${nombreGanador}`);
     }
 }
 
@@ -61,4 +62,9 @@ function buscarElemento(unaLista, unIndex){
 }
 
 //Asignar texto
+function asignarTextoElemento(idElemento, texto){
+    let elementoHTML = document.getElementById(idElemento);
+    elementoHTML.innerHTML = texto;
+    return;
+}
 //Limpiar Lista
