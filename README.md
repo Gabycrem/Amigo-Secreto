@@ -66,7 +66,7 @@ Puedes ver una demostración en vivo alojada en GitHub Pages:
 ![Resultado del sorteo](./assets/screenshot-result.png)  
 
 ### Demo en acción  
-![Demo de Amigo Secreto](./assets/amigoSecretoGif.gif)  
+![Demo de Amigo Secreto](./assets/amigoSecretoNuevoGif.gif)  
 
 ---  
 
