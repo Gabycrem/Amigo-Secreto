@@ -14,12 +14,18 @@ function agregarAmigo(){
         alert('Debe ingresar un nombre');
         return;
     }
+    //Validar que no ingrese un nombre repetido
+    if (miListaDeAmigos.includes(nombreAmigo)){
+        alert('Nombre repetido, ingrese otro');
+        return;
+    }
     //Agregar nombre a la lista
     miListaDeAmigos.push(nombreAmigo);
     //Mostrar Lista de nombres en pantallla
     nuevoItemLista(nombreAmigo);
     //Limpiar Campo
     limpiarCampo('amigo');
+    return;
 }
 
 //Crea un nuevo elemento 'li' dentro del elemento 'ul' con ID 'listaAmigos'
@@ -50,6 +56,7 @@ function sortearAmigo(){
         asignarTextoElemento('resultado',`El amigo secreto sorteado es: ${nombreGanador}`);
         limpiarLista();
     }
+    return;
 }
 
 //Generar Index
@@ -75,4 +82,5 @@ function limpiarLista(){
         listaAmigos.removeChild(listaAmigos.firstChild);
     }
     miListaDeAmigos = [];
+    return;
 }
