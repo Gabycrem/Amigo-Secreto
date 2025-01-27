@@ -1,5 +1,3 @@
-Aquí tienes la versión mejorada de tu README con todas las sugerencias integradas:  
-
 ---  
 
 # 🎉 Amigo Secreto - Alura Latam Challenge  
